@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X } from 'lucide-react';
-
+import Image from "next/image";
 
 // MediaItemType defines the structure of a media item
 interface MediaItemType {
@@ -79,10 +79,11 @@ const MediaItem = ({ item, className, onClick }: { item: MediaItemType, classNam
 
         return () => {
             mounted = false;
-            if (videoRef.current) {
-                videoRef.current.pause();
-                videoRef.current.removeAttribute('src');
-                videoRef.current.load();
+            const video = videoRef.current;
+            if (video) {
+                video.pause();
+                video.removeAttribute('src');
+                video.load();
             }
         };
     }, [isInView]);
@@ -119,9 +120,11 @@ const MediaItem = ({ item, className, onClick }: { item: MediaItemType, classNam
     }
 
     return (
-        <img
-            src={item.url} // Image source URL
-            alt={item.title} // Alt text for the image
+        <Image
+            src={item.url}
+            alt={item.title}
+            width={400} // set appropriate width
+            height={300} // set appropriate height
             className={`${className} object-cover cursor-pointer`} // Style the image
             onClick={onClick} // Trigger onClick when the image is clicked
             loading="lazy" // Lazy load the image for performance
