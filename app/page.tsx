@@ -1,6 +1,6 @@
 "use client";
 import Hero from "@/components/Hero";
-import Image from "next/image";
+import { Navbar1 } from "@/components/navbar";
 import Third from "@/components/third";
 import Second from "@/components/second";
 import Testimonial from "@/components/testimonial";

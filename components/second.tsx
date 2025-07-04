@@ -1,5 +1,4 @@
 "use client";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { Outfit } from "next/font/google";
 import { useRef } from "react";

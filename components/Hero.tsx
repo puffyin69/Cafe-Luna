@@ -6,16 +6,6 @@ import { gsap } from "gsap";
 import { SplitText } from "gsap/all";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
-import {
-  Dialog,
-  DialogTrigger,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogDescription,
-  DialogFooter,
-} from "@/components/ui/dialog";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Navbar1 } from "@/components/navbar"; // import Navbar1
 
 gsap.registerPlugin(SplitText);
@@ -62,13 +52,14 @@ const Hero = () => {
         src="/drink.jpg"
         alt="Cafe"
         fill
-        className="object-cover "
+        className="object-cover"
         priority
       />
       {/* Black Fade Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/30 " />
       {/* Content */}
       <div className="relative z-10 flex flex-col items-start justify-center h-full pl-8 md:pl-32 pt-24 ">
+        <div className="w-32 h-1 mb-6 bg-gradient-to-r from-transparent via-[#FFD700] to-transparent rounded-full" />
         <h1
           ref={headingRef}
           className={`text-white text-4xl md:text-6xl font-bold leading-tight mb-4 mt-12 ${overlock.className}`}
@@ -83,14 +74,15 @@ const Hero = () => {
         <p
           className={`text-[#f3cc0e] text-lg md:text-2xl mb-8 max-w-xl ${poppins.className}`}
         >
-          "Sit back under our warm lights, savor handcrafted brews, and let
-          the calm take over."
+          &quot;Sit back under our warm lights, savor handcrafted brews, and let
+          the calm take over.&quot;
         </p>
         <a
           href="/menu.png"
-          download
+          className={`text-white text-base mt-6 ${poppins.className}`}
           target="_blank"
           rel="noopener noreferrer"
+          download
         >
           <Button className="text-white text-lg md:text-xl font-semibold bg-[#FE975C] px-8 py-3 rounded-full shadow-lg hover:scale-105 transition-transform duration-300">
             Download Our Menu

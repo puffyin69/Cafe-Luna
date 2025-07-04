@@ -4,19 +4,9 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Oregano, Noto_Sans } from "next/font/google";
 import { Menu as MenuIcon, X as CloseIcon } from "lucide-react";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogDescription,
-} from "@/components/ui/dialog";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { gsap } from "gsap";
 import { ScrollSmoother, ScrollTrigger, SplitText } from "gsap/all";
-import { useGSAP } from "@gsap/react";
 import {
-  ClerkProvider,
   SignInButton,
   SignedIn,
   SignedOut,
