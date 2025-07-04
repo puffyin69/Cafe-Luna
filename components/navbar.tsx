@@ -52,14 +52,7 @@ const Navbar1 = ({ solidBg = false }: { solidBg?: boolean }) => {
       {/* Desktop Auth Buttons */}
       <div className="hidden md:flex items-center gap-2 md:gap-4">
         <SignedOut>
-          <SignInButton mode="modal">
-            <Button
-              className="bg-[#FFD700] text-[#2D0B10] rounded-full px-5 md:px-7 py-2 font-semibold shadow-lg hover:bg-[#FE975C] hover:text-white hover:scale-105 transition-all duration-200 border border-[#FFD700]"
-              style={{ letterSpacing: "0.04em" }}
-            >
-              Sign In
-            </Button>
-          </SignInButton>
+          <SignInButton mode="modal" />
         </SignedOut>
         <SignedIn>
           <UserButton afterSignOutUrl="/" />
@@ -86,15 +79,7 @@ const Navbar1 = ({ solidBg = false }: { solidBg?: boolean }) => {
               Gallery
             </Link>
             <SignedOut>
-              <SignInButton mode="modal">
-                <Button
-                  className="bg-[#FFD700] text-[#2D0B10] rounded-full px-10 py-2 font-semibold hover:bg-[#FE975C] hover:text-white transition-colors duration-200 shadow-lg mt-2 border border-[#FFD700] w-full"
-                  style={{ letterSpacing: "0.04em" }}
-                  onClick={() => setIsOpen(false)}
-                >
-                  Sign In
-                </Button>
-              </SignInButton>
+              <SignInButton mode="modal" />
             </SignedOut>
             <SignedIn>
               <UserButton afterSignOutUrl="/" />
