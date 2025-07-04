@@ -6,10 +6,3 @@ export default clerkMiddleware(async (auth, req) => {
     await auth.protect();
   }
 });
-
-export const config = {
-  matcher: [
-    '/dashboard(.*)', // Only match dashboard routes
-    // ...other protected routes if needed
-  ],
-};

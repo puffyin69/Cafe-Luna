@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { Oregano, Noto_Sans } from "next/font/google";
 import { Menu as MenuIcon, X as CloseIcon } from "lucide-react";
 import { gsap } from "gsap";
